@@ -28,7 +28,7 @@ button1_pin = 22 # pin for the big red button
 button2_pin = 18 # pin for button to shutdown the pi
 button3_pin = 16 # pin for button to end the program, but not shutdown the pi
 
-post_online = 1 # default 1. Change to 0 if you don't want to upload pics.
+post_online = 0 # default 1. Change to 0 if you don't want to upload pics.
 total_pics = 4 # number of pics to be taken
 capture_delay = 2 # delay between pics
 prep_delay = 3 # number of seconds at step 1 as users prep to have photo taken
