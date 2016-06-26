@@ -211,7 +211,7 @@ def start_photobooth():
 	graphicsmagick = "gm convert -delay " + str(gif_delay) + " " + config.file_path + now + "*.jpg " + config.file_path + now + ".gif" 
 	os.system(graphicsmagick) #make the .gif
 	print "Uploading to tumblr. Please check " + config.tumblr_blog + ".tumblr.com soon."
-'''
+	
 	if post_online: # turn off posting pics online in the variable declarations at the top of this document
 		connected = is_connected() #check to see if you have an internet connection
 		while connected: 
@@ -227,7 +227,6 @@ def start_photobooth():
 				except:
 					print('Something went wrong. Could not write file.')
 					sys.exit(0) # quit Python
-'''
 	GPIO.output(led3_pin,False) #turn off the LED
 	
 	########################### Begin Step 4 #################################
