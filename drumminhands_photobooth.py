@@ -35,8 +35,8 @@ prep_delay = 3 # number of seconds at step 1 as users prep to have photo taken
 gif_delay = 100 # How much time between frames in the animated gif
 restart_delay = 5 # how long to display finished message before beginning a new session
 
-monitor_w = 800
-monitor_h = 480
+monitor_w = 1920
+monitor_h = 1080
 transform_x = 640 # how wide to scale the jpg when replaying
 transfrom_y = 480 # how high to scale the jpg when replaying
 offset_x = 80 # how far off to left corner to display photos
