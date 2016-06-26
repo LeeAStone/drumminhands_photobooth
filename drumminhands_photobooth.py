@@ -236,7 +236,7 @@ def start_photobooth():
 	except Exception, e:
 		tb = sys.exc_info()[2]
 		traceback.print_exception(e.__class__, e, tb)
-	pygame.quit()
+	pygame.QUIT
 	print "Done"
 	GPIO.output(led4_pin,False) #turn off the LED
 	
