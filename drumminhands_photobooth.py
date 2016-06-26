@@ -134,12 +134,13 @@ def init_pygame():
     return pygame.display.set_mode(size, pygame.FULLSCREEN)
 
 def show_image(image_path):
-    screen = init_pygame()
-    img=pygame.image.load(image_path) 
-    img = pygame.transform.scale(img,(transform_x,transfrom_y))
-    screen.blit(img,(offset_x,offset_y))
-    pygame.display.flip()
-
+    #screen = init_pygame()
+    #img = pygame.transform.scale(img,(transform_x,transfrom_y))
+    #img=pygame.image.load(image_path) 
+    #screen.blit(img,(offset_x,offset_y))
+    #pygame.display.flip()
+    print "showing: " + image_path
+    
 def display_pics(jpg_group):
     # this section is an unbelievable nasty hack - for some reason Pygame
     # needs a keyboardinterrupt to initialise in some limited circs (second time running)
