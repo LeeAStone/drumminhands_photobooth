@@ -13,7 +13,7 @@ import atexit
 import sys
 import socket
 import pygame
-import pytumblr # https://github.com/tumblr/pytumblr
+#import pytumblr # https://github.com/tumblr/pytumblr
 import config
 from signal import alarm, signal, SIGALRM, SIGKILL
 
@@ -46,7 +46,7 @@ replay_cycles = 2 # how many times to show each photo on-screen after taking
 
 test_server = 'www.google.com'
 real_path = os.path.dirname(os.path.realpath(__file__))
-
+'''
 # Setup the tumblr OAuth Client
 client = pytumblr.TumblrRestClient(
     config.consumer_key,
@@ -54,7 +54,7 @@ client = pytumblr.TumblrRestClient(
     config.oath_token,
     config.oath_secret,
 );
-
+'''
 ####################
 ### Other Config ###
 ####################
@@ -211,7 +211,7 @@ def start_photobooth():
 	graphicsmagick = "gm convert -delay " + str(gif_delay) + " " + config.file_path + now + "*.jpg " + config.file_path + now + ".gif" 
 	os.system(graphicsmagick) #make the .gif
 	print "Uploading to tumblr. Please check " + config.tumblr_blog + ".tumblr.com soon."
-
+'''
 	if post_online: # turn off posting pics online in the variable declarations at the top of this document
 		connected = is_connected() #check to see if you have an internet connection
 		while connected: 
@@ -227,6 +227,7 @@ def start_photobooth():
 				except:
 					print('Something went wrong. Could not write file.')
 					sys.exit(0) # quit Python
+'''
 	GPIO.output(led3_pin,False) #turn off the LED
 	
 	########################### Begin Step 4 #################################
